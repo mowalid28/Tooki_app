@@ -1,3 +1,6 @@
+import 'package:big_chat/view/friend_list_page.dart';
+import 'package:big_chat/view/register_page.dart';
+import 'package:big_chat/view/story_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -6,26 +9,16 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PageView(
-        scrollDirection: Axis.horizontal, // التمرير أفقي
+      body: Column(
         children: [
-          Container(
-            color: Colors.red,
-            child: Center(
-                child: Text('Page 1',
-                    style: TextStyle(fontSize: 24, color: Colors.white))),
-          ),
-          Container(
-            color: Colors.green,
-            child: Center(
-                child: Text('Page 2',
-                    style: TextStyle(fontSize: 24, color: Colors.white))),
-          ),
-          Container(
-            color: Colors.blue,
-            child: Center(
-                child: Text('Page 3',
-                    style: TextStyle(fontSize: 24, color: Colors.white))),
+          Expanded(
+            child: PageView(
+              scrollDirection: Axis.horizontal, // التمرير أفقي
+              children: [
+                RegisterPage(),
+                StoryPage(),
+              ],
+            ),
           ),
         ],
       ),

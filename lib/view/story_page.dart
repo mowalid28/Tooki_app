@@ -6,6 +6,13 @@ class StoryPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Container(
+        color: Colors.green,
+        child: Center(
+            child: Text('Page 2',
+                style: TextStyle(fontSize: 24, color: Colors.white))),
+      ),
+    );
   }
 }
